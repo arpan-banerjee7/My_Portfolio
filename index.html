@@ -449,6 +449,7 @@
                         type="reset"
                         value="Clear Form"
                         class="alt"
+                        id="clear-form"
                         style="box-shadow: 0 2px 10px rgba(0, 0, 0, 2);"
                       />
                     </li>
@@ -581,6 +582,16 @@
           );
           $("#form-submit-error").show();
         }
+      });
+      $("#clear-form").click(function () {
+        console.log("clear form");
+        $("#name").val("");
+        $("#email").val("");
+        $("#subject").val("");
+        $("#message").val("");
+        $("#form-submit-error").hide();
+        $("#emailError").hide();
+        $("#subjectError").hide();
       });
     </script>
   </body>
