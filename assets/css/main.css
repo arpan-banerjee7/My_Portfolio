@@ -2095,6 +2095,10 @@ ul.actions li:first-child {
 
 .icon.brands:before {
   font-family: "Font Awesome 5 Brands";
+  
+}
+ul.social li a:before {
+  background-color: transparent !important;
 }
 
 .icon.featured {
