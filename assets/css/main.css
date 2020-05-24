@@ -2046,6 +2046,7 @@ ul.actions li:first-child {
 .box.style2 {
   padding: 2em 5em 5em 5em;
   margin-bottom: 25px;
+  height: 430px
 }
 
 .box.style2 h3 {
@@ -2345,6 +2346,8 @@ body > article {
     height: 24em;
     margin: 0;
   }
+
+
 }
 
 /* Medium */
@@ -2359,6 +2362,11 @@ body > article {
 
   #top .image {
     margin: 2em auto 5em auto;
+  }
+  .box.style2 {
+    padding: 2em 5em 5em 5em;
+    margin-bottom: 25px;
+    height: 330px
   }
 }
 
@@ -2515,6 +2523,7 @@ h3 {
     max-width: 32em;
     margin-left: auto !important;
     margin-right: auto !important;
+    height: auto;
   }
 
   /* Wrappers */
