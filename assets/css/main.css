@@ -2069,7 +2069,7 @@ ul.actions li:first-child {
   color: rgb(255, 0, 0);
   font-family: helvetica;
   text-decoration: none;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .box.style2 > a:hover {
   text-decoration: underline;
@@ -2403,7 +2403,7 @@ h3 {
   color: rgb(255, 0, 0);
   font-family: helvetica;
   text-decoration: none;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .box.style2 > a:hover {
   text-decoration: underline;
