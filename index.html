@@ -410,7 +410,6 @@
             <form
               id="contact-form"
               name="contact-form"
-              method="post"
               action="POST"
               data-netlify="true"
             >
@@ -603,6 +602,7 @@
         $("#subject").val("");
         $("#message").val("");
         $("#form-submit-error").hide();
+        $("#form-submit-message").hide();
         $("#emailError").hide();
         $("#subjectError").hide();
       });
