@@ -237,20 +237,26 @@
         <div class="row">
           <div class="col-4 col-6-medium col-12-small">
             <article style="position: relative;" class="box style2">
-                  <h3>
-                    <a
-                      href="https://github.com/Arpan619Banerjee/dom_pig_game_javascript"
-                      >Pig Game</a
-                    >
-                  </h3>
-                  <p>
-                    The famous Pig Game using vanilla javasScript.It
-                    demonstrates the DOM manipulation using javasScript.
-                  </p>
-                  <a style="position: absolute;bottom: 0;padding-bottom: 30px;margin-left: -40px;"
-                    href="https://github.com/Arpan619Banerjee/dom_pig_game_javascript"
-                    >View Code</a
-                  >
+              <h3>
+                <a
+                  href="https://github.com/Arpan619Banerjee/dom_pig_game_javascript"
+                  >Pig Game</a
+                >
+              </h3>
+              <p>
+                The famous Pig Game using vanilla javasScript.It demonstrates
+                the DOM manipulation using javasScript.
+              </p>
+              <a
+                style="
+                  position: absolute;
+                  bottom: 0;
+                  padding-bottom: 30px;
+                  margin-left: -40px;
+                "
+                href="https://github.com/Arpan619Banerjee/dom_pig_game_javascript"
+                >View Code</a
+              >
             </article>
           </div>
           <div class="col-4 col-6-medium col-12-small">
@@ -267,10 +273,16 @@
                 range of recipes, adding them to shopping cart, creating new
                 recipes, searching for particular recipes.
               </p>
-                <a style="position: absolute;bottom: 0;padding-bottom: 30px;margin-left: -40px;"
-                  href="https://github.com/Arpan619Banerjee/angular_recipe_book"
-                  >View Code</a
-                >
+              <a
+                style="
+                  position: absolute;
+                  bottom: 0;
+                  padding-bottom: 30px;
+                  margin-left: -40px;
+                "
+                href="https://github.com/Arpan619Banerjee/angular_recipe_book"
+                >View Code</a
+              >
             </article>
           </div>
           <div class="col-4 col-6-medium col-12-small">
@@ -284,10 +296,16 @@
                 A recipe management application using javasScript ER6, NPM,
                 Babel and WebPack.It uses a REST API as backend service.
               </p>
-                <a style="position: absolute;bottom: 0;padding-bottom: 30px;margin-left: -40px;" 
+              <a
+                style="
+                  position: absolute;
+                  bottom: 0;
+                  padding-bottom: 30px;
+                  margin-left: -40px;
+                "
                 href="https://github.com/Arpan619Banerjee/Forkify_JS_app"
-                  >View Code</a
-                >
+                >View Code</a
+              >
             </article>
           </div>
           <div class="col-4 col-6-medium col-12-small">
@@ -303,10 +321,16 @@
                 database with REST controllers. Hibernate has been used as an
                 ORM framework with liquibase for DB version control.
               </p>
-                <a style="position: absolute;bottom: 0;padding-bottom: 30px;margin-left: -40px;" 
-                  href="https://github.com/Arpan619Banerjee/SpringBoot_rest_api"
-                  >View Code</a
-                >
+              <a
+                style="
+                  position: absolute;
+                  bottom: 0;
+                  padding-bottom: 30px;
+                  margin-left: -40px;
+                "
+                href="https://github.com/Arpan619Banerjee/SpringBoot_rest_api"
+                >View Code</a
+              >
             </article>
           </div>
           <div class="col-4 col-6-medium col-12-small">
@@ -321,10 +345,16 @@
                 Express.js and Node.js. It has basic routing guards, to diasble
                 certian routes when an user is not logged in.
               </p>
-                <a style="position: absolute;bottom: 0;padding-bottom: 30px;margin-left: -40px;" 
+              <a
+                style="
+                  position: absolute;
+                  bottom: 0;
+                  padding-bottom: 30px;
+                  margin-left: -40px;
+                "
                 href="https://github.com/Arpan619Banerjee/jwt_mongodb_auth"
-                  >View Code</a
-                >
+                >View Code</a
+              >
             </article>
           </div>
           <div class="col-4 col-6-medium col-12-small">
@@ -341,10 +371,16 @@
                 and resilience.It makes use of Hysterix to implement circuit
                 breaker and bulk head pattern.
               </p>
-                <a style="position: absolute;bottom: 0;padding-bottom: 30px;margin-left: -40px;"
-                  href="https://github.com/Arpan619Banerjee/movie_catalog_SpringB_microservice"
-                  >View Code</a
-                >
+              <a
+                style="
+                  position: absolute;
+                  bottom: 0;
+                  padding-bottom: 30px;
+                  margin-left: -40px;
+                "
+                href="https://github.com/Arpan619Banerjee/movie_catalog_SpringB_microservice"
+                >View Code</a
+              >
             </article>
           </div>
         </div>
@@ -366,10 +402,11 @@
         <header>
           <h2>Like my portfolio? You can drop me a mail.</h2>
           <p>Any suggestions/improvement ideas are welcome.</p>
+          <p id="form-submit-message" style="color: rgb(82, 134, 230);"></p>
         </header>
         <div class="row">
           <div class="col-12">
-            <form method="post" action="#">
+            <form id="contact-form" method="post" action="#">
               <div class="row">
                 <div class="col-6 col-12-small">
                   <input type="text" name="name" id="name" placeholder="Name" />
@@ -380,7 +417,7 @@
                     name="email"
                     id="email"
                     placeholder="Email"
-                  />
+                  /><span id="emailError" style="color: red;"></span>
                 </div>
                 <div class="col-12">
                   <input
@@ -388,7 +425,7 @@
                     name="subject"
                     id="subject"
                     placeholder="Subject"
-                  />
+                  /><span id="subjectError" style="color: red;"></span>
                 </div>
                 <div class="col-12">
                   <textarea
@@ -443,7 +480,12 @@
         </div>
         <footer>
           <ul id="copyright">
-            <li>&copy; arpan.nbanerjee7@gmail.com</li>
+            <li>
+              &copy;
+              <a href="mailto:arpan.nbanerjee7@gmail.com"
+                >arpan.nbanerjee7@gmail.com</a
+              >
+            </li>
             <li>Design: <a>Arpan Banerjee</a></li>
           </ul>
         </footer>
@@ -451,11 +493,72 @@
     </article>
 
     <!-- Scripts -->
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- Form Submission Handler -->
+    <script>
+      $(function () {
+        $("#emailError").hide();
+        $("#subjectError").hide();
+        $("#form-submit-message").hide();
+        var error_email = false;
+
+        //email error
+        $("#email").focusout(function () {
+          var pattern = new RegExp(
+            /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i
+          );
+          if (pattern.test($("#email").val())) {
+            $("#emailError").hide();
+          } else {
+            console.log("invalid email");
+            $("#emailError").html("Please enter a valid email id.");
+            $("#emailError").show();
+            error_email = true;
+          }
+        });
+
+        // subject error
+        $("#subject").keypress(function () {
+          if (this.value.length > 50) {
+            $("#subjectError").hide();
+            return false;
+          }
+          if (
+            $("#subject").focusout(function () {
+              $("#subjectError").hide();
+            })
+          );
+          $("#subjectError").html(
+            "Remaining characters : " + (100 - this.value.length)
+          );
+          $("#subjectError").show();
+        });
+      });
+
+      $("#contact-form").submit(function (event) {
+        event.preventDefault();
+        var emailInput = $("#email").val();
+        var subjectInput = $("#subject").val();
+        var textMsgInput = $("#message").val();
+
+        var nameInput = $("#name").val();
+
+        $("#name").val("");
+        $("#email").val("");
+        $("#subject").val("");
+        $("#message").val("");
+        $("#form-submit-message").html(
+          "I have recevied your message! Thanks for writing."
+        );
+        $("#form-submit-message").show();
+      });
+    </script>
   </body>
 </html>
