@@ -2046,7 +2046,7 @@ ul.actions li:first-child {
 .box.style2 {
   padding: 2em 5em 5em 5em;
   margin-bottom: 25px;
-  height: 430px
+  height: 435px;
 }
 
 .box.style2 h3 {
@@ -2346,8 +2346,6 @@ body > article {
     height: 24em;
     margin: 0;
   }
-
-
 }
 
 /* Medium */
@@ -2366,7 +2364,7 @@ body > article {
   .box.style2 {
     padding: 2em 5em 5em 5em;
     margin-bottom: 25px;
-    height: 330px
+    height: 330px;
   }
 }
 
