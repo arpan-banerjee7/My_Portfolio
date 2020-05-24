@@ -2064,9 +2064,9 @@ ul.actions li:first-child {
   margin: -4em 0 4em -4em;
   width: auto;
 }
-/*addingc  dynamic style to link TODO*/
+/*adding  dynamic style to link TODO*/
 .box.style2 > a {
-  color: rgb(255, 0, 0);
+  color: rgb(82, 134, 230);
   font-family: helvetica;
   text-decoration: none;
   /* text-transform: uppercase; */
@@ -2077,10 +2077,6 @@ ul.actions li:first-child {
 
 .box.style2 > a:active {
   color: black;
-}
-
-.box.style2 > a:visited {
-  color: purple;
 }
 
 /* Icons */
@@ -2117,7 +2113,6 @@ ul.actions li:first-child {
 
 .icon.brands:before {
   font-family: "Font Awesome 5 Brands";
-  
 }
 ul.social li a:before {
   background-color: transparent !important;
@@ -2400,7 +2395,7 @@ h3 {
 }
 /*adding  dynamic style to link TODO*/
 .box.style2 > a {
-  color: rgb(255, 0, 0);
+  color: rgb(82, 134, 230);
   font-family: helvetica;
   text-decoration: none;
   /* text-transform: uppercase; */
@@ -2413,9 +2408,6 @@ h3 {
   color: black;
 }
 
-.box.style2 > a:visited {
-  color: purple;
-}
 ul.social li a:before {
   background-color: transparent !important;
 }
