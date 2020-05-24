@@ -104,6 +104,10 @@ section {
   display: block;
 }
 
+.projectbox {
+  display: flex;
+  flex-direction: column;
+}
 body {
   line-height: 1;
 }
@@ -2046,7 +2050,7 @@ ul.actions li:first-child {
 .box.style2 {
   padding: 2em 5em 5em 5em;
   margin-bottom: 25px;
-  height: 435px;
+  height: 485px;
 }
 
 .box.style2 h3 {
@@ -2059,6 +2063,24 @@ ul.actions li:first-child {
   top: 2em;
   margin: -4em 0 4em -4em;
   width: auto;
+}
+/*addingc  dynamic style to link TODO*/
+.box.style2 > a {
+  color: rgb(255, 0, 0);
+  font-family: helvetica;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.box.style2 > a:hover {
+  text-decoration: underline;
+}
+
+.box.style2 > a:active {
+  color: black;
+}
+
+.box.style2 > a:visited {
+  color: purple;
 }
 
 /* Icons */
@@ -2348,7 +2370,7 @@ body > article {
   }
 }
 
-/* Medium */
+/******************************************* Medium***************************************** */
 
 @media screen and (max-width: 980px) {
   /* Articles */
@@ -2364,7 +2386,7 @@ body > article {
   .box.style2 {
     padding: 2em 5em 5em 5em;
     margin-bottom: 25px;
-    height: 330px;
+    height: 410px;
   }
 }
 
@@ -2372,8 +2394,25 @@ h3 {
   font-size: 1em;
   margin: 0 2em 0.4em 1;
 }
+/*adding  dynamic style to link TODO*/
+.box.style2 > a {
+  color: rgb(255, 0, 0);
+  font-family: helvetica;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.box.style2 > a:hover {
+  text-decoration: underline;
+}
 
-/* Small */
+.box.style2 > a:active {
+  color: black;
+}
+
+.box.style2 > a:visited {
+  color: purple;
+}
+/* ****************************************SMALL **************************************************************************/
 
 @media screen and (max-width: 736px) {
   /* Basic */
