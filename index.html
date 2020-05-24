@@ -407,7 +407,12 @@
         </header>
         <div class="row">
           <div class="col-12">
-            <form id="contact-form" method="post" action="#">
+            <form
+              id="contact-form"
+              method="post"
+              action="POST"
+              data-netlify="true"
+            >
               <div class="row">
                 <div class="col-6 col-12-small">
                   <input type="text" name="name" id="name" placeholder="Name" />
@@ -514,15 +519,19 @@
 
         $("#name").focusin(function () {
           $("#form-submit-error").hide();
+          $("#form-submit-message").hide();
         });
         $("#email").focusin(function () {
           $("#form-submit-error").hide();
+          $("#form-submit-message").hide();
         });
         $("#subject").focusin(function () {
           $("#form-submit-error").hide();
+          $("#form-submit-message").hide();
         });
         $("#message").focusin(function () {
           $("#form-submit-error").hide();
+          $("#form-submit-message").hide();
         });
 
         //email error
