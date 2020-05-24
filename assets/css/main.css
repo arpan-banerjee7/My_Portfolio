@@ -2416,6 +2416,9 @@ h3 {
 .box.style2 > a:visited {
   color: purple;
 }
+ul.social li a:before {
+  background-color: transparent !important;
+}
 /* ****************************************SMALL **************************************************************************/
 
 @media screen and (max-width: 736px) {
