@@ -164,6 +164,16 @@ html {
   box-sizing: border-box;
 }
 
+/***************************************MAILTO****************/
+.mailto {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.671);
+}
+.mailto:hover {
+  text-decoration: underline;
+}
+
+/***************************************MAILTO****************/
 *,
 *:before,
 *:after {
@@ -2387,6 +2397,10 @@ body > article {
     margin-bottom: 25px;
     height: 410px;
   }
+  .mailto {
+    text-decoration: none;
+    text-decoration: underline;
+  }
 }
 
 h3 {
@@ -2533,6 +2547,13 @@ ul.social li a:before {
     margin-top: 0;
   }
 
+  /***************************************MAILTO****************/
+  .mailto {
+    text-decoration: none;
+    text-decoration: underline;
+  }
+
+  /***************************************MAILTO****************/
   /* Box */
 
   .box {
