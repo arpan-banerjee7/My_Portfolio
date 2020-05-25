@@ -2464,6 +2464,13 @@ ul.social li a:before {
     margin: 1.5em 0 2em 0;
   }
 
+  .image img {
+    margin-top: -1em;
+  }
+  .button.large {
+    margin: 1em 0 1em 0;
+  }
+
   /* Section/Article */
 
   section,
