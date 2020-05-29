@@ -1829,7 +1829,7 @@ button,
   box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5),
     inset 0px 2px 1px 0px rgba(255, 255, 255, 0.75);
   background-color: rgb(99, 163, 236);
-  padding: 1em 2.35em 1em 2.35em;
+  padding: 0.75em 1.05em;
   font-size: 1.1em;
   max-width: 24em;
 }
@@ -2181,8 +2181,8 @@ ul.social li a:before {
 }
 
 .wrapper.style4 {
-  background-color: #303030;
-  color: #999;
+  background-color: #313030;
+  color: rgb(68, 66, 66);
   text-shadow: -1px -1px 0px #181818;
 }
 
@@ -2200,7 +2200,7 @@ ul.social li a:before {
 .wrapper.style4 form select,
 .wrapper.style4 form textarea {
   border: none;
-  background: #282828;
+  background: #201f1f;
 }
 
 .wrapper.style4 form input[type="text"]:focus,
