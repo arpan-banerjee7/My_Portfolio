@@ -167,7 +167,8 @@ html {
 /***************************************MAILTO****************/
 .mailto {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.671);
+  color: rgba(49, 46, 46, 0.671);
+  text-shadow: none;
 }
 .mailto:hover {
   text-decoration: underline;
@@ -203,7 +204,7 @@ textarea,
 select {
   font-family: "Open Sans", sans-serif;
   line-height: 1.85em;
-  color: #888;
+  color: rgb(24, 23, 23);
   font-weight: 300;
   font-size: 13pt;
 }
@@ -2181,9 +2182,9 @@ ul.social li a:before {
 }
 
 .wrapper.style4 {
-  background-color: #313030;
-  color: rgb(68, 66, 66);
-  text-shadow: -1px -1px 0px #181818;
+  background-color: #d4d3d3;
+  color: rgb(250, 248, 248);
+  text-shadow: -1px -1px 0px #525050;
 }
 
 .wrapper.style4 h1,
@@ -2192,7 +2193,8 @@ ul.social li a:before {
 .wrapper.style4 h4,
 .wrapper.style4 h5,
 .wrapper.style4 h6 {
-  color: #fff;
+  color: #3e3e3e;
+  text-shadow: none;
 }
 
 .wrapper.style4 form input[type="text"],
@@ -2200,7 +2202,7 @@ ul.social li a:before {
 .wrapper.style4 form select,
 .wrapper.style4 form textarea {
   border: none;
-  background: #201f1f;
+  background: #afaaaa;
 }
 
 .wrapper.style4 form input[type="text"]:focus,
@@ -2330,6 +2332,7 @@ body > article {
   box-shadow: -1px 0px 0px 0px rgba(255, 255, 255, 0.1);
   padding: 0 0 0 1em;
   margin: 0 0 0 1em;
+  text-shadow: none;
 }
 
 #copyright li:first-child {
