@@ -1696,7 +1696,7 @@ form textarea {
   border-radius: 8px;
   border: solid 1px #ddd;
   background: #fff;
-  color: #bbb;
+  color: rgb(29, 28, 28);
   box-shadow: inset 0px 2px 3px 1px rgba(0, 0, 0, 0.05),
     0px 1px 0px 0px rgba(255, 255, 255, 0.025);
   width: 100%;
@@ -1707,7 +1707,7 @@ form input[type="email"]:focus,
 form input[type="password"]:focus,
 form select:focus,
 form textarea:focus {
-  background: #fafafa;
+  background: #e2d6d6;
   box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.05),
     0px 1px 0px 0px rgba(255, 255, 255, 0.025), inset 0px 0px 2px 1px #43bff0;
 }
@@ -2234,14 +2234,14 @@ ul.social li a:before {
 .wrapper.style4 form select,
 .wrapper.style4 form textarea {
   border: none;
-  background: #afaaaa;
+  background: rgba(41, 39, 39, 0.151);
 }
 
 .wrapper.style4 form input[type="text"]:focus,
 .wrapper.style4 form input[type="password"]:focus,
 .wrapper.style4 form select:focus,
 .wrapper.style4 form textarea:focus {
-  background: #252525;
+  background: #d4cdcd;
 }
 
 /* Nav */
