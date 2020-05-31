@@ -104,6 +104,36 @@ section {
   display: block;
 }
 
+.toolbox {
+  display: flex;
+  align-items: center;
+  padding: 9px;
+  background: #333;
+}
+
+.dot {
+  border-radius: 100%;
+  margin: 0.25rem;
+  background-color: #eee;
+  width: 10px;
+  height: 10px;
+}
+
+.em-heart {
+  background-image: url(https://twemoji.maxcdn.com/2/72x72/2764.png);
+}
+
+.em,
+.em-svg {
+  height: 1.25em;
+  width: 1.5em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .projectbox {
   display: flex;
   flex-direction: column;
@@ -340,6 +370,8 @@ header > p {
 
 footer {
   margin: 3em 0 0 0;
+  color: #999;
+  text-align: center;
 }
 
 footer > p {
@@ -391,7 +423,7 @@ footer > p {
 @media screen and (max-width: 736px) {
   .container {
     width: 100%;
-    max-width: calc(100% - 30px);
+    max-width: calc(100% - 10px);
   }
 
   .container.medium {
@@ -2316,6 +2348,10 @@ body > article {
 }
 
 /* Copyright */
+
+.footer__copyright {
+  background-color: #333;
+}
 
 #copyright {
   color: #666;
