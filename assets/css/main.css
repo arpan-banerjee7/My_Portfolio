@@ -1708,8 +1708,8 @@ form input[type="password"]:focus,
 form select:focus,
 form textarea:focus {
   background: #e2d6d6;
-  box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.05),
-    0px 1px 0px 0px rgba(255, 255, 255, 0.025), inset 0px 0px 2px 1px #43bff0;
+  box-shadow: inset 0px 2px 5px 0px rgba(94, 89, 89, 0.05),
+    0px 1px 0px 0px rgba(255, 255, 255, 0.025), inset 0px 0px 2px 1px #424f55;
 }
 
 form textarea {
