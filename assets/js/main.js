@@ -73,6 +73,31 @@
     $("#subject").val("");
     $("#message").val("");
     if (emailInput && subjectInput && textMsgInput && nameInput) {
+      console.log(JSON.stringify({ emailInput, subjectInput, textMsgInput }));
+
+      let formData = JSON.stringify({ emailInput, subjectInput, textMsgInput });
+      // $.post(
+      //   "http://localhost:8080/formData",
+      //   formData,
+      //   "application/json; charset=utf-8",
+      //   function (data, status) {
+      //     alert(status);
+      //   }
+      // );
+
+      $.ajax({
+        url: "http://localhost:8080/formData",
+        type: "POST",
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        data: formData,
+        success: function (data) {
+          alert(data);
+        },
+        error: function (data) {
+          alert(data);
+        },
+      });
       $("#form-submit-message").html(
         "I have recevied your message! Thanks for writing."
       );
