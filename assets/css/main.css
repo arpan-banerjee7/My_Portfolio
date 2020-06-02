@@ -2130,9 +2130,10 @@ ul.actions li:first-child {
 }
 /*adding  dynamic style to link TODO*/
 .box.style2 > a {
-  color: rgb(82, 134, 230);
+  color: rgb(64, 126, 241);
   font-family: helvetica;
   text-decoration: none;
+  font-size: 1.02em;
   /* text-transform: uppercase; */
 }
 .box.style2 > a:hover {
@@ -2493,13 +2494,18 @@ ul.social li a:before {
   body {
     padding-top: 44px;
   }
-
+  .project {
+    font-size: 1.2em;
+  }
+  .project-title {
+    font-size: 1em;
+  }
   body,
   input,
   textarea,
   select {
     line-height: 1.75em;
-    font-size: 10pt;
+    font-size: 9pt;
     letter-spacing: 0;
   }
 
@@ -2509,7 +2515,7 @@ ul.social li a:before {
   h4,
   h5,
   h6 {
-    font-size: 1.25em;
+    font-size: 1.35em;
     margin: 0 0 0.4em 0;
   }
 
@@ -2689,7 +2695,7 @@ ul.social li a:before {
   }
 
   #top p {
-    font-size: 1em;
+    font-size: 1.3em;
   }
 
   #contact footer {
