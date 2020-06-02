@@ -92,10 +92,10 @@
         contentType: "application/json; charset=utf-8",
         data: formData,
         success: function (data) {
-          alert(data);
+          // alert(data);
         },
         error: function (data) {
-          alert(data);
+          //alert(data);
         },
       });
       $("#form-submit-message").html(

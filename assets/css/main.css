@@ -427,7 +427,11 @@ footer > p {
   }
 
   .container.medium {
-    width: 100%;
+    width: 80%;
+  }
+  .footer-button {
+    width: 88%;
+    padding-left: 39px;
   }
 }
 
