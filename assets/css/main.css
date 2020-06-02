@@ -426,7 +426,9 @@ footer > p {
 
     max-width: calc(100% - 10px);
   }
-
+  .container a {
+    font-size: 1.03em;
+  }
   .container.medium {
     width: 80%;
   }

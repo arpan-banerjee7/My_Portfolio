@@ -116,7 +116,9 @@ h1 span {
   .timeline-block-right {
     float: none;
   }
-
+  #nav a {
+    font-size: 1.03em;
+  }
   .timeline-block-left {
     float: none;
     direction: ltr;
