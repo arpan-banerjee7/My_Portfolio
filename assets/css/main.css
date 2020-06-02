@@ -422,7 +422,8 @@ footer > p {
 
 @media screen and (max-width: 736px) {
   .container {
-    width: 100%;
+    width: 90%;
+
     max-width: calc(100% - 10px);
   }
 
