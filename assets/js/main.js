@@ -158,7 +158,10 @@
       ) {
         var $form = $(this);
         $.post($form.attr("action"), $form.serialize()).then(function () {
-          alert("Thank you!");
+          $("#form-submit-message").html(
+            "I have recevied your message! Thanks for writing."
+          );
+          $("#form-submit-message").show();
           clear_form();
         });
       } else {
