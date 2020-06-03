@@ -5,60 +5,60 @@
 */
 
 (function ($) {
-  // $(function () {
-  //   console.log("form fields touched");
-  //   $("#emailError").hide();
-  //   $("#subjectError").hide();
-  //   $("#form-submit-message").hide();
-  //   var error_email = false;
+  $(function () {
+    console.log("form fields touched");
+    $("#emailError").hide();
+    $("#subjectError").hide();
+    $("#form-submit-message").hide();
+    var error_email = false;
 
-  //   $("#name").focusin(function () {
-  //     $("#form-submit-error").hide();
-  //     $("#form-submit-message").hide();
-  //   });
-  //   $("#email").focusin(function () {
-  //     $("#form-submit-error").hide();
-  //     $("#form-submit-message").hide();
-  //   });
-  //   $("#subject").focusin(function () {
-  //     $("#form-submit-error").hide();
-  //     $("#form-submit-message").hide();
-  //   });
-  //   $("#message").focusin(function () {
-  //     $("#form-submit-error").hide();
-  //     $("#form-submit-message").hide();
-  //   });
+    $("#name").focusin(function () {
+      $("#form-submit-error").hide();
+      $("#form-submit-message").hide();
+    });
+    $("#email").focusin(function () {
+      $("#form-submit-error").hide();
+      $("#form-submit-message").hide();
+    });
+    $("#subject").focusin(function () {
+      $("#form-submit-error").hide();
+      $("#form-submit-message").hide();
+    });
+    $("#message").focusin(function () {
+      $("#form-submit-error").hide();
+      $("#form-submit-message").hide();
+    });
 
-  //   //email error
-  //   $("#email").focusout(function () {
-  //     var pattern = new RegExp(/^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i);
-  //     if (pattern.test($("#email").val())) {
-  //       $("#emailError").hide();
-  //     } else {
-  //       console.log("invalid email");
-  //       $("#emailError").html("Please enter a valid email id.");
-  //       $("#emailError").show();
-  //       error_email = true;
-  //     }
-  //   });
+    //email error
+    $("#email").focusout(function () {
+      var pattern = new RegExp(/^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i);
+      if (pattern.test($("#email").val())) {
+        $("#emailError").hide();
+      } else {
+        console.log("invalid email");
+        $("#emailError").html("Please enter a valid email id.");
+        $("#emailError").show();
+        error_email = true;
+      }
+    });
 
-  //   // subject error
-  //   $("#subject").keypress(function () {
-  //     if (this.value.length > 50) {
-  //       $("#subjectError").hide();
-  //       return false;
-  //     }
-  //     if (
-  //       $("#subject").focusout(function () {
-  //         $("#subjectError").hide();
-  //       })
-  //     );
-  //     $("#subjectError").html(
-  //       "Remaining characters : " + (100 - this.value.length)
-  //     );
-  //     $("#subjectError").show();
-  //   });
-  // });
+    // subject error
+    $("#subject").keypress(function () {
+      if (this.value.length > 50) {
+        $("#subjectError").hide();
+        return false;
+      }
+      if (
+        $("#subject").focusout(function () {
+          $("#subjectError").hide();
+        })
+      );
+      $("#subjectError").html(
+        "Remaining characters : " + (100 - this.value.length)
+      );
+      $("#subjectError").show();
+    });
+  });
 
   // $("#contact-form").submit(function (event) {
   //   event.preventDefault();
