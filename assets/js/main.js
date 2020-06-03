@@ -6,12 +6,50 @@
 
 (function ($) {
   $(function () {
-    console.log("form fields touched");
     $("#emailError").hide();
     $("#subjectError").hide();
     $("#form-submit-message").hide();
     var error_email = false;
 
+    //check email error function
+    function check_email() {
+      var pattern = new RegExp(/^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i);
+      if (pattern.test($("#email").val())) {
+        $("#emailError").hide();
+      } else {
+        console.log("invalid email");
+        $("#emailError").html("Please enter a valid email id.");
+        $("#emailError").show();
+        error_email = true;
+      }
+    }
+
+    // check subject error fucntion
+    function check_subject() {
+      if ($("#subject").val().length > 50) {
+        $("#subjectError").hide();
+        return false;
+      }
+      if (
+        $("#subject").focusout(function () {
+          $("#subjectError").hide();
+        })
+      );
+      $("#subjectError").html(
+        "Remaining characters : " + (100 - $("#subject").val().length)
+      );
+      $("#subjectError").show();
+    }
+
+    //clear form function
+    function clear_form() {
+      $("#name").val("");
+      $("#email").val("");
+      $("#subject").val("");
+      $("#message").val("");
+    }
+
+    //control messages on focus
     $("#name").focusin(function () {
       $("#form-submit-error").hide();
       $("#form-submit-message").hide();
@@ -30,34 +68,12 @@
       $("#form-submit-message").hide();
     });
 
-    //email error
-    $("#email").focusout(function () {
-      var pattern = new RegExp(/^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i);
-      if (pattern.test($("#email").val())) {
-        $("#emailError").hide();
-      } else {
-        console.log("invalid email");
-        $("#emailError").html("Please enter a valid email id.");
-        $("#emailError").show();
-        error_email = true;
-      }
+    $("#subject").keypress(function () {
+      check_subject();
     });
 
-    // subject error
-    $("#subject").keypress(function () {
-      if (this.value.length > 50) {
-        $("#subjectError").hide();
-        return false;
-      }
-      if (
-        $("#subject").focusout(function () {
-          $("#subjectError").hide();
-        })
-      );
-      $("#subjectError").html(
-        "Remaining characters : " + (100 - this.value.length)
-      );
-      $("#subjectError").show();
+    $("#email").focusout(function () {
+      check_email();
     });
 
     // $("#contact-form").submit(function (event) {
@@ -123,16 +139,16 @@
     //netlify fprm submission
     $("#contact-form").submit(function (e) {
       e.preventDefault();
+      error_email = false;
+
+      //validating email before submission
+      check_email();
+
       var emailInput = $("#email").val();
       var subjectInput = $("#subject").val();
       var textMsgInput = $("#message").val();
-
       var nameInput = $("#name").val();
 
-      $("#name").val("");
-      $("#email").val("");
-      $("#subject").val("");
-      $("#message").val("");
       if (
         emailInput &&
         subjectInput &&
@@ -143,16 +159,18 @@
         var $form = $(this);
         $.post($form.attr("action"), $form.serialize()).then(function () {
           alert("Thank you!");
+          clear_form();
         });
       } else {
+        clear_form();
         $("#form-submit-error").html(
           "Please fill in the details before submitting."
         );
         $("#form-submit-error").show();
       }
     });
+
     $("#clear-form").click(function () {
-      console.log("clear form");
       $("#name").val("");
       $("#email").val("");
       $("#subject").val("");
