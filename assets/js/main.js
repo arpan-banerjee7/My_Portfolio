@@ -5,120 +5,120 @@
 */
 
 (function ($) {
-  $(function () {
-    console.log("form fields touched");
-    $("#emailError").hide();
-    $("#subjectError").hide();
-    $("#form-submit-message").hide();
-    var error_email = false;
+  // $(function () {
+  //   console.log("form fields touched");
+  //   $("#emailError").hide();
+  //   $("#subjectError").hide();
+  //   $("#form-submit-message").hide();
+  //   var error_email = false;
 
-    $("#name").focusin(function () {
-      $("#form-submit-error").hide();
-      $("#form-submit-message").hide();
-    });
-    $("#email").focusin(function () {
-      $("#form-submit-error").hide();
-      $("#form-submit-message").hide();
-    });
-    $("#subject").focusin(function () {
-      $("#form-submit-error").hide();
-      $("#form-submit-message").hide();
-    });
-    $("#message").focusin(function () {
-      $("#form-submit-error").hide();
-      $("#form-submit-message").hide();
-    });
+  //   $("#name").focusin(function () {
+  //     $("#form-submit-error").hide();
+  //     $("#form-submit-message").hide();
+  //   });
+  //   $("#email").focusin(function () {
+  //     $("#form-submit-error").hide();
+  //     $("#form-submit-message").hide();
+  //   });
+  //   $("#subject").focusin(function () {
+  //     $("#form-submit-error").hide();
+  //     $("#form-submit-message").hide();
+  //   });
+  //   $("#message").focusin(function () {
+  //     $("#form-submit-error").hide();
+  //     $("#form-submit-message").hide();
+  //   });
 
-    //email error
-    $("#email").focusout(function () {
-      var pattern = new RegExp(/^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i);
-      if (pattern.test($("#email").val())) {
-        $("#emailError").hide();
-      } else {
-        console.log("invalid email");
-        $("#emailError").html("Please enter a valid email id.");
-        $("#emailError").show();
-        error_email = true;
-      }
-    });
+  //   //email error
+  //   $("#email").focusout(function () {
+  //     var pattern = new RegExp(/^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i);
+  //     if (pattern.test($("#email").val())) {
+  //       $("#emailError").hide();
+  //     } else {
+  //       console.log("invalid email");
+  //       $("#emailError").html("Please enter a valid email id.");
+  //       $("#emailError").show();
+  //       error_email = true;
+  //     }
+  //   });
 
-    // subject error
-    $("#subject").keypress(function () {
-      if (this.value.length > 50) {
-        $("#subjectError").hide();
-        return false;
-      }
-      if (
-        $("#subject").focusout(function () {
-          $("#subjectError").hide();
-        })
-      );
-      $("#subjectError").html(
-        "Remaining characters : " + (100 - this.value.length)
-      );
-      $("#subjectError").show();
-    });
-  });
+  //   // subject error
+  //   $("#subject").keypress(function () {
+  //     if (this.value.length > 50) {
+  //       $("#subjectError").hide();
+  //       return false;
+  //     }
+  //     if (
+  //       $("#subject").focusout(function () {
+  //         $("#subjectError").hide();
+  //       })
+  //     );
+  //     $("#subjectError").html(
+  //       "Remaining characters : " + (100 - this.value.length)
+  //     );
+  //     $("#subjectError").show();
+  //   });
+  // });
 
-  $("#contact-form").submit(function (event) {
-    event.preventDefault();
-    var emailInput = $("#email").val();
-    var subjectInput = $("#subject").val();
-    var textMsgInput = $("#message").val();
+  // $("#contact-form").submit(function (event) {
+  //   event.preventDefault();
+  //   var emailInput = $("#email").val();
+  //   var subjectInput = $("#subject").val();
+  //   var textMsgInput = $("#message").val();
 
-    var nameInput = $("#name").val();
+  //   var nameInput = $("#name").val();
 
-    $("#name").val("");
-    $("#email").val("");
-    $("#subject").val("");
-    $("#message").val("");
-    if (emailInput && subjectInput && textMsgInput && nameInput) {
-      let formData = JSON.stringify({ emailInput, subjectInput, textMsgInput });
-      // $.post(
-      //   "http://localhost:8080/formData",
-      //   formData,
-      //   "application/json; charset=utf-8",
-      //   function (data, status) {
-      //     alert(status);
-      //   }
-      // );
+  //   $("#name").val("");
+  //   $("#email").val("");
+  //   $("#subject").val("");
+  //   $("#message").val("");
+  //   if (emailInput && subjectInput && textMsgInput && nameInput) {
+  //     let formData = JSON.stringify({ emailInput, subjectInput, textMsgInput });
+  //     // $.post(
+  //     //   "http://localhost:8080/formData",
+  //     //   formData,
+  //     //   "application/json; charset=utf-8",
+  //     //   function (data, status) {
+  //     //     alert(status);
+  //     //   }
+  //     // );
 
-      // $.ajax({
-      //   url: "http://localhost:8080/formData",
-      //   type: "POST",
-      //   dataType: "json",
-      //   contentType: "application/json; charset=utf-8",
-      //   data: formData,
-      //   success: function (data) {
-      //     // alert(data);
-      //   },
-      //   error: function (data) {
-      //     //alert(data);
-      //   },
-      // });
-      $("#form-submit-message").html(
-        "I have recevied your message! Thanks for writing."
-      );
-      $("#form-submit-error").hide();
-      $("#form-submit-message").show();
-    } else {
-      $("#form-submit-error").html(
-        "Please fill in the details before submitting."
-      );
-      $("#form-submit-error").show();
-    }
-  });
-  $("#clear-form").click(function () {
-    console.log("clear form");
-    $("#name").val("");
-    $("#email").val("");
-    $("#subject").val("");
-    $("#message").val("");
-    $("#form-submit-error").hide();
-    $("#form-submit-message").hide();
-    $("#emailError").hide();
-    $("#subjectError").hide();
-  });
+  //     // $.ajax({
+  //     //   url: "http://localhost:8080/formData",
+  //     //   type: "POST",
+  //     //   dataType: "json",
+  //     //   contentType: "application/json; charset=utf-8",
+  //     //   data: formData,
+  //     //   success: function (data) {
+  //     //     // alert(data);
+  //     //   },
+  //     //   error: function (data) {
+  //     //     //alert(data);
+  //     //   },
+  //     // });
+  //     $("#form-submit-message").html(
+  //       "I have recevied your message! Thanks for writing."
+  //     );
+  //     $("#form-submit-error").hide();
+  //     $("#form-submit-message").show();
+  //   } else {
+  //     $("#form-submit-error").html(
+  //       "Please fill in the details before submitting."
+  //     );
+  //     $("#form-submit-error").show();
+  //   }
+  // });
+  // $("#clear-form").click(function () {
+  //   console.log("clear form");
+  //   $("#name").val("");
+  //   $("#email").val("");
+  //   $("#subject").val("");
+  //   $("#message").val("");
+  //   $("#form-submit-error").hide();
+  //   $("#form-submit-message").hide();
+  //   $("#emailError").hide();
+  //   $("#subjectError").hide();
+  // });
 
   var $window = $(window),
     $body = $("body"),
