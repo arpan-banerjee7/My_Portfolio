@@ -18,6 +18,7 @@
     });
     $("#email").focusin(function () {
       $("#form-submit-error").hide();
+
       $("#form-submit-message").hide();
     });
     $("#subject").focusin(function () {
@@ -58,105 +59,110 @@
       );
       $("#subjectError").show();
     });
+
+    // $("#contact-form").submit(function (event) {
+    //   event.preventDefault();
+    //   var emailInput = $("#email").val();
+    //   var subjectInput = $("#subject").val();
+    //   var textMsgInput = $("#message").val();
+
+    //   var nameInput = $("#name").val();
+
+    //   $("#name").val("");
+    //   $("#email").val("");
+    //   $("#subject").val("");
+    //   $("#message").val("");
+    //   if (emailInput && subjectInput && textMsgInput && nameInput) {
+    //     let formData = JSON.stringify({ emailInput, subjectInput, textMsgInput });
+    //     // $.post(
+    //     //   "http://localhost:8080/formData",
+    //     //   formData,
+    //     //   "application/json; charset=utf-8",
+    //     //   function (data, status) {
+    //     //     alert(status);
+    //     //   }
+    //     // );
+
+    //     // $.ajax({
+    //     //   url: "http://localhost:8080/formData",
+    //     //   type: "POST",
+    //     //   dataType: "json",
+    //     //   contentType: "application/json; charset=utf-8",
+    //     //   data: formData,
+    //     //   success: function (data) {
+    //     //     // alert(data);
+    //     //   },
+    //     //   error: function (data) {
+    //     //     //alert(data);
+    //     //   },
+    //     // });
+    //     $("#form-submit-message").html(
+    //       "I have recevied your message! Thanks for writing."
+    //     );
+    //     $("#form-submit-error").hide();
+    //     $("#form-submit-message").show();
+    //   } else {
+    //     $("#form-submit-error").html(
+    //       "Please fill in the details before submitting."
+    //     );
+    //     $("#form-submit-error").show();
+    //   }
+    // });
+    // $("#clear-form").click(function () {
+    //   console.log("clear form");
+    //   $("#name").val("");
+    //   $("#email").val("");
+    //   $("#subject").val("");
+    //   $("#message").val("");
+    //   $("#form-submit-error").hide();
+    //   $("#form-submit-message").hide();
+    //   $("#emailError").hide();
+    //   $("#subjectError").hide();
+    // });
+
+    //netlify fprm submission
+    $("#contact-form").submit(function (e) {
+      e.preventDefault();
+      var emailInput = $("#email").val();
+      var subjectInput = $("#subject").val();
+      var textMsgInput = $("#message").val();
+
+      var nameInput = $("#name").val();
+
+      $("#name").val("");
+      $("#email").val("");
+      $("#subject").val("");
+      $("#message").val("");
+      if (
+        emailInput &&
+        subjectInput &&
+        textMsgInput &&
+        nameInput &&
+        error_email == false
+      ) {
+        var $form = $(this);
+        $.post($form.attr("action"), $form.serialize()).then(function () {
+          alert("Thank you!");
+        });
+      } else {
+        $("#form-submit-error").html(
+          "Please fill in the details before submitting."
+        );
+        $("#form-submit-error").show();
+      }
+    });
+    $("#clear-form").click(function () {
+      console.log("clear form");
+      $("#name").val("");
+      $("#email").val("");
+      $("#subject").val("");
+      $("#message").val("");
+      $("#form-submit-error").hide();
+      $("#form-submit-message").hide();
+      $("#emailError").hide();
+      $("#subjectError").hide();
+    });
   });
-
-  // $("#contact-form").submit(function (event) {
-  //   event.preventDefault();
-  //   var emailInput = $("#email").val();
-  //   var subjectInput = $("#subject").val();
-  //   var textMsgInput = $("#message").val();
-
-  //   var nameInput = $("#name").val();
-
-  //   $("#name").val("");
-  //   $("#email").val("");
-  //   $("#subject").val("");
-  //   $("#message").val("");
-  //   if (emailInput && subjectInput && textMsgInput && nameInput) {
-  //     let formData = JSON.stringify({ emailInput, subjectInput, textMsgInput });
-  //     // $.post(
-  //     //   "http://localhost:8080/formData",
-  //     //   formData,
-  //     //   "application/json; charset=utf-8",
-  //     //   function (data, status) {
-  //     //     alert(status);
-  //     //   }
-  //     // );
-
-  //     // $.ajax({
-  //     //   url: "http://localhost:8080/formData",
-  //     //   type: "POST",
-  //     //   dataType: "json",
-  //     //   contentType: "application/json; charset=utf-8",
-  //     //   data: formData,
-  //     //   success: function (data) {
-  //     //     // alert(data);
-  //     //   },
-  //     //   error: function (data) {
-  //     //     //alert(data);
-  //     //   },
-  //     // });
-  //     $("#form-submit-message").html(
-  //       "I have recevied your message! Thanks for writing."
-  //     );
-  //     $("#form-submit-error").hide();
-  //     $("#form-submit-message").show();
-  //   } else {
-  //     $("#form-submit-error").html(
-  //       "Please fill in the details before submitting."
-  //     );
-  //     $("#form-submit-error").show();
-  //   }
-  // });
-  // $("#clear-form").click(function () {
-  //   console.log("clear form");
-  //   $("#name").val("");
-  //   $("#email").val("");
-  //   $("#subject").val("");
-  //   $("#message").val("");
-  //   $("#form-submit-error").hide();
-  //   $("#form-submit-message").hide();
-  //   $("#emailError").hide();
-  //   $("#subjectError").hide();
-  // });
-
-  //netlify fprm submission
-  $("#contact-form").submit(function (event) {
-    e.preventDefault();
-    var emailInput = $("#email").val();
-    var subjectInput = $("#subject").val();
-    var textMsgInput = $("#message").val();
-
-    var nameInput = $("#name").val();
-
-    $("#name").val("");
-    $("#email").val("");
-    $("#subject").val("");
-    $("#message").val("");
-    if (emailInput && subjectInput && textMsgInput && nameInput) {
-      var $form = $(this);
-      $.post($form.attr("action"), $form.serialize()).then(function () {
-        alert("Thank you!");
-      });
-    } else {
-      $("#form-submit-error").html(
-        "Please fill in the details before submitting."
-      );
-      $("#form-submit-error").show();
-    }
-  });
-  $("#clear-form").click(function () {
-    console.log("clear form");
-    $("#name").val("");
-    $("#email").val("");
-    $("#subject").val("");
-    $("#message").val("");
-    $("#form-submit-error").hide();
-    $("#form-submit-message").hide();
-    $("#emailError").hide();
-    $("#subjectError").hide();
-  });
-
   var $window = $(window),
     $body = $("body"),
     $nav = $("#nav");
