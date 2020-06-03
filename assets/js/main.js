@@ -120,6 +120,43 @@
   //   $("#subjectError").hide();
   // });
 
+  //netlify fprm submission
+  $("#contact-form").submit(function (event) {
+    e.preventDefault();
+    var emailInput = $("#email").val();
+    var subjectInput = $("#subject").val();
+    var textMsgInput = $("#message").val();
+
+    var nameInput = $("#name").val();
+
+    $("#name").val("");
+    $("#email").val("");
+    $("#subject").val("");
+    $("#message").val("");
+    if (emailInput && subjectInput && textMsgInput && nameInput) {
+      var $form = $(this);
+      $.post($form.attr("action"), $form.serialize()).then(function () {
+        alert("Thank you!");
+      });
+    } else {
+      $("#form-submit-error").html(
+        "Please fill in the details before submitting."
+      );
+      $("#form-submit-error").show();
+    }
+  });
+  $("#clear-form").click(function () {
+    console.log("clear form");
+    $("#name").val("");
+    $("#email").val("");
+    $("#subject").val("");
+    $("#message").val("");
+    $("#form-submit-error").hide();
+    $("#form-submit-message").hide();
+    $("#emailError").hide();
+    $("#subjectError").hide();
+  });
+
   var $window = $(window),
     $body = $("body"),
     $nav = $("#nav");
