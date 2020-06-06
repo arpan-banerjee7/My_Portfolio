@@ -2461,7 +2461,7 @@ body > article {
     height: 410px;
   }
   .mailto {
-    text-decoration: none;
+    color: rgb(51, 103, 201);
     text-decoration: underline;
   }
 }
@@ -2619,7 +2619,7 @@ ul.social li a:before {
 
   .mailto {
     text-decoration: none;
-    color: rgba(17, 16, 16, 0.788);
+    color: rgb(51, 103, 201);
     text-shadow: none;
   }
   .mailto:hover {
