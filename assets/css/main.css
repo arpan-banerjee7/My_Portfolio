@@ -2616,8 +2616,13 @@ ul.social li a:before {
   }
 
   /***************************************MAILTO****************/
+
   .mailto {
     text-decoration: none;
+    color: rgba(17, 16, 16, 0.788);
+    text-shadow: none;
+  }
+  .mailto:hover {
     text-decoration: underline;
   }
 
