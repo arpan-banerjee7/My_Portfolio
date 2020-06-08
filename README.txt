@@ -14,7 +14,7 @@ Feedback, bug reports, and comments are not only welcome, but strongly encourage
 
  arpan.nbanerjee7@gmail.com
 
-PS: Not sure how to get that contact form working? Give formspree.io a try (it's awesome).
+
 
 
 Credits:
