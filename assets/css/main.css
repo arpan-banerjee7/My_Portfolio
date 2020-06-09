@@ -1805,7 +1805,7 @@ article:last-child {
 .image img {
   display: block;
   width: 100%;
-  margin-top: -4.5em;
+  margin-top: -3.5em;
   margin-bottom: 3em;
 }
 
@@ -2339,7 +2339,7 @@ body > article {
 }
 
 #top h1 {
-  margin-top: -1.5em;
+  margin-top: -1em;
 }
 
 #top p {
