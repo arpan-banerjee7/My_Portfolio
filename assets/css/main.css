@@ -103,6 +103,9 @@ nav,
 section {
   display: block;
 }
+.textf {
+  font-size: 0.8rem;
+}
 
 .toolbox {
   display: flex;
@@ -374,10 +377,6 @@ footer {
   text-align: center;
 }
 
-.textf {
-  font-size: 0.6rem;
-}
-
 /* Container */
 
 .container {
@@ -425,6 +424,10 @@ footer {
     width: 90%;
 
     max-width: calc(100% - 10px);
+  }
+
+  .textf {
+    font-size: 0.6rem;
   }
   .container a {
     font-size: 1.03em;
