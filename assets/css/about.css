@@ -21,7 +21,9 @@ h1 {
 h1 span {
   font-weight: 600;
 }
-
+.texte {
+  font-size: 0.8rem;
+}
 .container {
   width: 80%;
   padding: 50px 0;
