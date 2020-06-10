@@ -149,4 +149,7 @@ footer {
     float: none;
     direction: ltr;
   }
+  .texte {
+    font-size: 0.6rem;
+  }
 }
